@@ -29,12 +29,12 @@ class Lokasidata extends CI_Controller
 	public function index()
 	{
 		$data['result'] = $this->mod->tampillokasi()['result'];
-		$this->parser->parse('lokasidata', $data);
+		$this->parser->parse('lokasi/lokasidata', $data);
 	}
 	public function add()
 	{
 		$data['title'] = 'Tambah Lokasi';
-		$this->parser->parse('lokasiadd', $data);
+		$this->parser->parse('lokasi/lokasiadd', $data);
 	}
 
 	public function add_proses()
@@ -51,12 +51,22 @@ class Lokasidata extends CI_Controller
 		$this->mod->add_proses($data);
 		redirect(site_url('lokasidata'));
 	}
-
-	public function ubah($id)
+	
+	public function detail($id)
 	{
 		$data['title'] = 'Ubah Lokasi';
 		$data['result'] = $this->mod->detail_lokasi($id);	
-		// print('<pre>'); print_r($data); exit();	
-		$this->parser->parse('lokasiedit', $data);
+		$data['id'] = $id;			
+		$this->parser->parse('lokasi/lokasidetail', $data);
+	}
+
+	public function add_detail()
+	{
+		$data = [
+			"id"	=> $this->input->post('id'),
+			"foto"	=> $this->input->post('urlimagebase64'),
+		];
+		$this->mod->add_detail_proses($data);
+		redirect(site_url('lokasidata'));
 	}
 }

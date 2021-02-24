@@ -18,38 +18,34 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<br />	
 	<div class="row">
 	<div class="col-md-12">
-	<form method="post" action="<?php echo base_url('lokasidata/update_proses') ?>">	
-	<div class="form-group">
-			<label for="id">ID Lokasi</label>
-			<input type="text" class="form-control" id="id" name="id" placeholder="Nama Lokasi" value="{id}" required>			
-		</div>
+	<form method="post" action="<?php echo base_url('lokasidata/add_proses') ?>">
 		<div class="form-group">
-			<label for="nama">Nama Lokasi</label>
-			<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lokasi" value="{nama}" required>			
+			<label for="exampleInputEmail1">Nama Lokasi</label>
+			<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lokasi" required>			
 		</div>
 		<div class="form-group">
 			<label for="exampleInputEmail1">Alamat Lokasi</label>
-			<input type="text" class="form-control" id="alamat" name="alamat"  placeholder="Alamat Lokasi" value="{alamat}" required>			
+			<input type="text" class="form-control" id="alamat" name="alamat"  placeholder="Alamat Lokasi" required>			
 		</div>
 		<div class="form-group">
 			<label for="exampleInputEmail1">Provinsi</label>
-			<input type="text" class="form-control" id="provinsi" name="provinsi" value="{provinsi}">			
+			<input type="text" class="form-control" id="provinsi" name="provinsi" placeholder="Provinsi">			
 		</div>
 		<div class="form-group">
 			<label for="exampleInputEmail1">Kota</label>
-			<input type="text" class="form-control" id="kota" name="kota" placeholder="kota" value="{kota}">			
+			<input type="text" class="form-control" id="kota" name="kota" placeholder="kota">			
 		</div>
 		<div class="form-group">
 			<label for="exampleInputEmail1">Kecamatan</label>
-			<input type="text" class="form-control" id="kecamatan" name="kecamatan" placeholder="Kecamatan" value="{kecamatan}">			
+			<input type="text" class="form-control" id="kecamatan" name="kecamatan" placeholder="Kecamatan">			
 		</div>
 		<div class="form-group">
 			<label for="exampleInputEmail1">Desa</label>
-			<input type="text" class="form-control" id="desa" name="desa"  placeholder="Desa" value="{desa}">			
+			<input type="text" class="form-control" id="desa" name="desa"  placeholder="Desa">			
 		</div>
 		<div class="form-group">
 			<label for="exampleInputEmail1">Informasi</label>
-			<input type="text" class="form-control" id="informasi" name="informasi" placeholder="Informasi" value="{informasi}" required>			
+			<input type="text" class="form-control" id="informasi" name="informasi" placeholder="Informasi" required>			
 		</div>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>

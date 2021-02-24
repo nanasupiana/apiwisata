@@ -30,7 +30,7 @@ class M_lokasidata extends CI_Model
 		$this->db->query($query);
 	}
 
-	public function ubah_karyawan($data)
+	public function ubah_lokasi($data)
 	{
 		$this->db->where("id", $this->input->post('id'));
 		$query = $this->db->set($data)->get_compiled_update('lokasi');
@@ -44,5 +44,11 @@ class M_lokasidata extends CI_Model
 			return TRUE;
 		else
 			return FALSE;
+	}
+
+	public function add_detail_proses($data)
+	{
+		$query = $this->db->set($data)->get_compiled_insert('lokasi_foto');
+		$this->db->query($query);
 	}
 }

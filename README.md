@@ -1,2 +1,2 @@
-# API Wisata
-COMIT Insan Pembangunan & Nana Supiana
+# ci3-restserver-master
+REST Server Master CodeIgniter 3
